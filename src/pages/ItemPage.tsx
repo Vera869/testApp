@@ -1,9 +1,13 @@
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { AppDispatch } from "../store/Store";
+import { useDispatch } from "react-redux";
+import { setCategory } from "../store/Slice";
 import { Item } from "../Types";
 import  "./PagesStyle.css";
 
 export const ItemPage: React.FC = () => {
+  const dispatch: AppDispatch = useDispatch();
   const navigate = useNavigate();
   
   const [isLoad, setIsLoad] = useState<boolean>(true);
@@ -25,6 +29,7 @@ export const ItemPage: React.FC = () => {
   }, [currentItemId]);
  
   const hendleNavigate = () => {
+    dispatch(setCategory("women's clothing"));
     navigate("/");
   };
   
