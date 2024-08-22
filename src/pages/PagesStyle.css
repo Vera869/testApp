@@ -1,0 +1,99 @@
+   /*  Основные цвета: лаванда: #c79fef  беж: #fffdd0   шоколад: #55280c  фисташка: #bef574 */
+
+   .container {
+      min-height: 100vh;
+      width: 80vw;
+      margin: 0 10vw;
+      background-color: #fffdd0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      padding: 5px 20px;
+   }
+   
+   .content-header{
+     font-size:xx-large;
+     color: #55280c;
+     margin: 10px 0;
+   }
+   
+   .content-loader {
+     padding: 10vw;
+     width: 20vw;
+   }
+   
+   .content-box{
+     width: 80vw;
+     display: flex;
+     flex-wrap: wrap;
+     gap:20px;
+     justify-content: space-evenly;
+   }
+   
+   .content-item {
+     max-height: 300px;
+     width: 30vw;
+     display: flex;
+     flex-direction: column;
+     padding: 20px;
+     background-color: #c79fef;
+     border: 3px solid #bef574;
+     border-radius: 20px;
+     
+   }
+   
+   .content-images {
+     display: flex;
+     justify-content: space-between;
+   }
+   
+   .content-image {
+      width: 10vw;
+      height: 13vw;
+      border-radius: 10%;
+      border: 3px solid #bef574;
+      cursor: pointer;
+    }
+   
+    .content-icons{
+     display: flex;
+     flex-direction: column;
+     gap: 5px;
+    }
+   .content-like, 
+   .content-delete {
+     width: 2vw;
+     height: 2vw;
+     cursor: pointer;
+   }
+   .content-discripton-box{
+     min-height: auto;
+   }
+    .content-descriptions {
+       white-space: nowrap;
+       overflow: hidden;
+       text-overflow: ellipsis;
+    }
+   
+    .item{
+     display: flex;
+     flex-direction: column;
+     gap: 20px;
+     padding: 20px 70px 50px 70px;
+    }
+    .item-image{
+     width: 40vw;
+    }
+    .item-descriptions{
+     font-size: large;
+     margin: 0;
+    }
+    .item-button{
+     width: 40vw;
+    }
+   
+    .span-numbers {
+     font-weight: bold;
+     color: rgb(93, 9, 93);
+    }
