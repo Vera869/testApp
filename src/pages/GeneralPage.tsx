@@ -11,11 +11,12 @@ export const GeneralPage: React.FC = () => {
 
   const isLoad = useSelector((state: RootState) => state.items.isLoad);
   const errorMessage = useSelector((state: RootState) => state.items.errorMessage);
+  const Category = useSelector((state: RootState) => state.items.category);
   
   useEffect(()=> {
     const getContent = () => {
       //Получаем данные с сервера и сохраняем в store
-      fetch("https://fakestoreapi.com/products/category/women's clothing")
+      fetch(`https://fakestoreapi.com/products/category/${Category}`)
         .then(res => res.json())
         .then(json =>{
           dispatch(setAllItems(json));
@@ -25,7 +26,7 @@ export const GeneralPage: React.FC = () => {
     };
   
     getContent();
-  },[dispatch]);
+  },[dispatch, Category]);
 
   return(
     <div className="container"> 

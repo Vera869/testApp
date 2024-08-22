@@ -11,3 +11,4 @@ export interface Item{
    price: string;
    rating: Rating;
 }
+export type buttonRef = HTMLButtonElement | null;
