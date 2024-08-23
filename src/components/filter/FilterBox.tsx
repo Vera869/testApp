@@ -13,7 +13,7 @@ export const FilterBox: React.FC = () => {
   return(
     <div className="filter">
       <h3 className="filter-heder">Show: </h3>
-      <button className="filter-button" onClick={hendleFilter}>{isFiltered ? "favorites" : "all products"}</button>
+      <button className="filter-button" onClick={hendleFilter}>{isFiltered ? "all favorites" : "products"}</button>
     </div>
   );
 
