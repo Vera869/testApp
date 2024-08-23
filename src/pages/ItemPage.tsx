@@ -35,7 +35,7 @@ export const ItemPage: React.FC = () => {
   
   return(
     <div className="container"> 
-      {isLoad ? (<img className="content-loader" src="../../../src/assets/img/loader-1.gif" alt="LOADING"/>) :  
+      {isLoad ? (<img className="content-loader" src="img/loader-1.gif" alt="LOADING"/>) :  
         <div className="item"> 
           {currentItem === undefined ? <>
             <h2 className="item-header">Something went wrong, try again</h2>

@@ -31,7 +31,7 @@ export const GeneralPage: React.FC = () => {
   return(
     <div className="container"> 
       <h2 className="content-header">Best offer of the month</h2>
-      {isLoad?(<img className="content-loader" src="../../../src/assets/img/loader-1.gif" alt="LOADING"/>): 
+      {isLoad?(<img className="content-loader" src="img/loader-1.gif" alt="LOADING"/>): 
         <>
           <FilterBox/>
           <Cards/>

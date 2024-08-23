@@ -42,7 +42,7 @@ export const NavMenu: React.FC = () => {
     dispatch(setIsLoad(true));
     // Назначаем категорию и сохраняем в store
     const category = e.currentTarget.id;
-    dispatch(setCategory(category)); 
+    dispatch(setCategory(category));
   }
 
   return(
