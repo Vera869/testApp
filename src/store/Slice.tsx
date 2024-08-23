@@ -9,6 +9,7 @@ const itemsSlice = createSlice({
     errorMessage: "",
     isFiltered: false,
     currentItemId: "",
+    category: "women's clothing",
   },
   reducers: {
     setAllItems(state, action) {
@@ -30,8 +31,11 @@ const itemsSlice = createSlice({
       state.currentItemId = action.payload;
       localStorage.setItem("id", state.currentItemId);
     },
+    setCategory(state, action) {
+      state.category = action.payload;
+    },
   },
    
 });
 export const itemsReducer = itemsSlice.reducer;
-export const { setAllItems, setIsLoad, setErrorMessage, setIsFiltered, setCurrentItemId, setFavItems} = itemsSlice.actions;
+export const { setAllItems, setIsLoad, setErrorMessage, setIsFiltered, setCurrentItemId, setFavItems, setCategory} = itemsSlice.actions;

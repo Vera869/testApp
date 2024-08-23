@@ -54,3 +54,10 @@ button:focus-visible {
   background-color: #9f6fcf;
   outline: none;
 }
+button:disabled {
+  background-color: #9f6fcf;
+  color: #b289db;
+  &:hover{
+    border: none;
+  }
+}
