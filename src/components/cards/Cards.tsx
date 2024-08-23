@@ -52,8 +52,8 @@ export const Cards: React.FC = () => {
         <button className="item-button" onClick={() => dispatch(setIsFiltered())}>Go to home page</button>;
       </div> : dataItems.map((item: Item) => {
         const id: string = item.id;
-        const imgUrlDislike = "../../../src/assets/img/dislike.png";
-        const imgUrlLike = "../../../src/assets/img/like.png";
+        const imgUrlDislike = "img/dislike.png";
+        const imgUrlLike = "img/like.png";
         //Проверяем, находится ли элемент в массиве избранных продуктов
         const currentItem: Item[] = favItems.filter((el: Item) => el.id === id);
         //Назначаем соответствующую картинку(Like/Dislike)
@@ -63,7 +63,7 @@ export const Cards: React.FC = () => {
             <div className="content-images">
               <img className="content-image" src={`${item.image}`}  onClick={() =>  handleItemPage(id)}/>
               <div className="content-icons">
-                <img className="content-like" onClick={() => handleDelete(id)} src="../../../src/assets/img/handleDelete.png"/>
+                <img className="content-like" onClick={() => handleDelete(id)} src="img/handleDelete.png"/>
                 <img className="content-delete" onClick={() => handleLike(id)} src={imgUrl}/>
               </div>
             </div>

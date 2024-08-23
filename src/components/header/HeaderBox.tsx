@@ -8,7 +8,7 @@ export const Header: React.FC = () => {
 
 
   return <div className="header">
-    <img className="header-icon" src="../../../src/assets/img/sale-2.png" alt="Sale"/>
+    <img className="header-icon" src="img/sale-2.png" alt="Sale"/>
     <h1>A Big Fashion Sale</h1>
     {home ? <NavMenu /> : ""}
   </div>;
