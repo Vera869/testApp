@@ -1,0 +1,8 @@
+.filter{
+   display:flex;
+   gap: 20px;
+   align-items: center;
+}
+.filter-button{
+   width: 200px;
+}
