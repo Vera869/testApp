@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { AppDispatch } from "../store/Store";
 import { useDispatch } from "react-redux";
 import { setCategory } from "../store/Slice";
+import { getProductById } from "../services/Api";
 import { Item } from "../Types";
 import  "./PagesStyle.css";
 
@@ -18,14 +19,12 @@ export const ItemPage: React.FC = () => {
 
   useEffect(() => {
     //Получаем данные с сервера и сохраняем в state
-    fetch(`https://fakestoreapi.com/products/${currentItemId}`)
-      .then(res => res.json())
-      .then(json =>{
-        setCurrentItem(json);
+    getProductById(currentItemId)
+      .then((data: Item) =>{
+        setCurrentItem(data);
         setIsLoad(false);
       })
       .catch(error => setErrorMessage(error.message));
-
   }, [currentItemId]);
  
   const hendleNavigate = () => {

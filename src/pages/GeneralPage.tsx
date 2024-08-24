@@ -5,6 +5,8 @@ import { setAllItems, setErrorMessage, setIsLoad} from "../store/Slice";
 import { FilterBox } from "../components/filter/FilterBox";
 import { Cards } from "../components/cards/Cards";
 import  "./PagesStyle.css";
+import { Item } from "../Types";
+import { getAllProducts } from "../services/Api";
 
 export const GeneralPage: React.FC = () => {
   const dispatch: AppDispatch = useDispatch();
@@ -14,18 +16,13 @@ export const GeneralPage: React.FC = () => {
   const Category = useSelector((state: RootState) => state.items.category);
   
   useEffect(()=> {
-    const getContent = () => {
-      //Получаем данные с сервера и сохраняем в store
-      fetch(`https://fakestoreapi.com/products/category/${Category}`)
-        .then(res => res.json())
-        .then(json =>{
-          dispatch(setAllItems(json));
-          dispatch(setIsLoad(false));
-        })
-        .catch(error => dispatch(setErrorMessage(error.message)));
-    };
-  
-    getContent();
+    //Получаем данные с сервера и сохраняем в store
+    getAllProducts(Category)
+      .then((data: Item[]) =>{
+        dispatch(setAllItems(data));
+        dispatch(setIsLoad(false));
+      })
+      .catch(error => dispatch(setErrorMessage(error.message)));
   },[dispatch, Category]);
 
   return(
