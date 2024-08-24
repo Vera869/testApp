@@ -14,6 +14,7 @@ export const GeneralPage: React.FC = () => {
   const isLoad = useSelector((state: RootState) => state.items.isLoad);
   const errorMessage = useSelector((state: RootState) => state.items.errorMessage);
   const category = useSelector((state: RootState) => state.items.category);
+  const isFiltered: boolean = useSelector((state: RootState) => state.items.isFiltered);
   
   useEffect(()=> {
     //Получаем данные с сервера и сохраняем в store
@@ -28,7 +29,7 @@ export const GeneralPage: React.FC = () => {
   return(
     <div className="container"> 
       <h2 className="content__header">Best offer of the month</h2>
-      {isLoad?(<img className="content__loader" src="img/loader-1.gif" alt="LOADING"/>): 
+      {isLoad && !isFiltered ?(<img className="content__loader" src="img/loader-1.gif" alt="LOADING"/>): 
         <>
           <FilterBox/>
           <Cards/>
