@@ -12,8 +12,8 @@ export const FilterBox: React.FC = () => {
   };
   return(
     <div className="filter">
-      <h3 className="filter-heder">Show: </h3>
-      <button className="filter-button" onClick={hendleFilter}>{isFiltered ? "all favorites" : "products"}</button>
+      <h3 className="filter__heder">Show: </h3>
+      <button className="filter__button" onClick={hendleFilter}>{isFiltered ? "all favorites" : "products"}</button>
     </div>
   );
 

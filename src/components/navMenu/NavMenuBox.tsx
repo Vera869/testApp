@@ -46,10 +46,10 @@ export const NavMenu: React.FC = () => {
   }
 
   return(
-    <div className="header-nav">
-      <button className="header-button" id="men's clothing" ref={refMans} disabled={MansCategory} onClick={hendleChangeCategory} >For Mans</button>
-      <button className="header-button" id="women's clothing" ref={refWomans} disabled={WomansCategory} onClick={hendleChangeCategory} >For Womens</button>
-      <button className="header-button" id="jewelery" ref={refJewelery} disabled={JeweleryCategory} onClick={hendleChangeCategory} >Jewelery</button>
+    <div className="header__nav">
+      <button className="header__button" id="men's clothing" ref={refMans} disabled={MansCategory} onClick={hendleChangeCategory} >For Mans</button>
+      <button className="header__button" id="women's clothing" ref={refWomans} disabled={WomansCategory} onClick={hendleChangeCategory} >For Womens</button>
+      <button className="header__button" id="jewelery" ref={refJewelery} disabled={JeweleryCategory} onClick={hendleChangeCategory} >Jewelery</button>
     </div>
   );
 };
