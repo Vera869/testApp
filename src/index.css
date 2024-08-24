@@ -1,6 +1,6 @@
 @font-face {
   font-family: circeRounded;
-  src: url(../../src/assets/fonts/CirceRounded-Regular.otf);
+  src: url(/fonts/Caveat/Caveat-VariableFont_wght.ttf);
 }
 * {
   margin: 0;
@@ -8,7 +8,6 @@
 }
 
 :root {
-  font-family: circeRounded;
   line-height: 1.5;
   font-weight: 400;
 
@@ -31,6 +30,7 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  font-family: circeRounded;
 }
 
 h1 {

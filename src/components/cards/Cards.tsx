@@ -46,10 +46,10 @@ export const Cards: React.FC = () => {
   };
 
   return (
-    <div className="content-box">
+    <div className="content__box">
       {favItems.length === 0 && isFiltered ? <div className="">
-        <h4 className="content-header">No favorites products</h4>
-        <button className="item-button" onClick={() => dispatch(setIsFiltered())}>Go to home page</button>;
+        <h4 className="content__header">No favorites products</h4>
+        <button className="item__button" onClick={() => dispatch(setIsFiltered())}>Go to home page</button>;
       </div> : dataItems.map((item: Item) => {
         const id: string = item.id;
         const imgUrlDislike = "img/dislike.png";
@@ -59,18 +59,18 @@ export const Cards: React.FC = () => {
         //Назначаем соответствующую картинку(Like/Dislike)
         const imgUrl = currentItem.length === 0 ? imgUrlDislike : imgUrlLike;
         return(
-          <div className="content-item" key={id} >
-            <div className="content-images">
-              <img className="content-image" src={`${item.image}`}  onClick={() =>  handleItemPage(id)}/>
-              <div className="content-icons">
-                <img className="content-like" onClick={() => handleDelete(id)} src="img/handleDelete.png"/>
-                <img className="content-delete" onClick={() => handleLike(id)} src={imgUrl}/>
+          <div className="content__item" key={id} >
+            <div className="content__images">
+              <img className="content__image" src={`${item.image}`}  onClick={() =>  handleItemPage(id)}/>
+              <div className="content__icons">
+                <img className="content__like" onClick={() => handleDelete(id)} src="img/handleDelete.png"/>
+                <img className="content__delete" onClick={() => handleLike(id)} src={imgUrl}/>
               </div>
             </div>
             <div>
-              <p className="content-descriptions">{item.title}</p>
-              <p className="content-descriptions">price: <span className="span-numbers">{item.price}</span></p>
-              <p className="content-descriptions">{item.description}</p>
+              <p className="content__descriptions">{item.title}</p>
+              <p className="content__descriptions">price: <span className="span__numbers">{item.price}</span></p>
+              <p className="content__descriptions">{item.description}</p>
             </div>
 
           </div>

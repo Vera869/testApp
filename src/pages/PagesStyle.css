@@ -12,18 +12,18 @@
       padding: 5px 20px;
    }
    
-   .content-header{
+   .content__header{
      font-size:xx-large;
      color: #55280c;
      margin: 10px 0;
    }
    
-   .content-loader {
+   .content__loader {
      padding: 10vw;
      width: 20vw;
    }
    
-   .content-box{
+   .content__box{
      width: 80vw;
      display: flex;
      flex-wrap: wrap;
@@ -31,7 +31,7 @@
      justify-content: space-evenly;
    }
    
-   .content-item {
+   .content__item {
      max-height: 300px;
      width: 30vw;
      display: flex;
@@ -43,12 +43,12 @@
      
    }
    
-   .content-images {
+   .content__images {
      display: flex;
      justify-content: space-between;
    }
    
-   .content-image {
+   .content__image {
       width: 10vw;
       height: 13vw;
       border-radius: 10%;
@@ -56,21 +56,21 @@
       cursor: pointer;
     }
    
-    .content-icons{
+    .content__icons{
      display: flex;
      flex-direction: column;
      gap: 5px;
     }
-   .content-like, 
-   .content-delete {
+   .content__like, 
+   .content__delete {
      width: 2vw;
      height: 2vw;
      cursor: pointer;
    }
-   .content-discripton-box{
+   .content__discripton-box{
      min-height: auto;
    }
-    .content-descriptions {
+    .content__descriptions {
        white-space: nowrap;
        overflow: hidden;
        text-overflow: ellipsis;
@@ -82,18 +82,18 @@
      gap: 20px;
      padding: 20px 70px 50px 70px;
     }
-    .item-image{
+    .item__image{
      width: 40vw;
     }
-    .item-descriptions{
+    .item__descriptions{
      font-size: large;
      margin: 0;
     }
-    .item-button{
+    .item__button{
      width: 40vw;
     }
    
-    .span-numbers {
+    .span__numbers {
      font-weight: bold;
      color: rgb(93, 9, 93);
     }

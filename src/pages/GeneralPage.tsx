@@ -27,14 +27,14 @@ export const GeneralPage: React.FC = () => {
 
   return(
     <div className="container"> 
-      <h2 className="content-header">Best offer of the month</h2>
-      {isLoad?(<img className="content-loader" src="img/loader-1.gif" alt="LOADING"/>): 
+      <h2 className="content__header">Best offer of the month</h2>
+      {isLoad?(<img className="content__loader" src="img/loader-1.gif" alt="LOADING"/>): 
         <>
           <FilterBox/>
           <Cards/>
         </>
       }
-      <p className="content-header">{errorMessage}</p>
+      <p className="content__header">{errorMessage}</p>
     </div>
   );
 };
