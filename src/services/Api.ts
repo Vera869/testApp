@@ -10,7 +10,7 @@ export async function getAllProducts(category: string){
   return data;
 }
 
-export async function getProductById(id: string| null){
+export async function getProductById(id: string| undefined){
   const response = await fetch(`${host}${id}`);
   if(!response.ok) {
     throw new Error("Произошла ошибка");

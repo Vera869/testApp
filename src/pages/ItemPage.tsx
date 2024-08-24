@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { AppDispatch } from "../store/Store";
 import { useDispatch } from "react-redux";
@@ -10,13 +10,14 @@ import  "./PagesStyle.css";
 export const ItemPage: React.FC = () => {
   const dispatch: AppDispatch = useDispatch();
   const navigate = useNavigate();
+  const params =useParams();
   
   const [isLoad, setIsLoad] = useState<boolean>(true);
   const [errorMessage, setErrorMessage] = useState<string>("");
   const [currentItem, setCurrentItem] = useState<Item>();
 
-  const currentItemId = localStorage.getItem("id");
-
+  // const currentItemId = localStorage.getItem("id");
+  const currentItemId = params.id;
   useEffect(() => {
     //Получаем данные с сервера и сохраняем в state
     getProductById(currentItemId)

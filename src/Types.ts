@@ -1,8 +1,8 @@
-interface Rating{
+interface Rating {
    count: string;
    rate: string;
  }
-export interface Item{
+export interface Item {
    id: string;
    title: string;
    category: string;
@@ -12,3 +12,13 @@ export interface Item{
    rating: Rating;
 }
 export type buttonRef = HTMLButtonElement | null;
+
+export interface SliceState {
+   allItems: [],
+   favItems: [],
+   isLoad: boolean,
+   errorMessage: string | undefined,
+   isFiltered: boolean,
+   currentItemId: string,
+   category: string,
+}
