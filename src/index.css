@@ -39,7 +39,7 @@ h1 {
 
 button {
   border-radius: 8px;
-  border: none;
+  border: 4px solid #c79fef;
   padding: 0.6em 1.2em;
   font-size: 1em;
   font-weight: 500;
@@ -54,14 +54,15 @@ button:hover {
 }
 button:focus,
 button:focus-visible {
-  border: 2px solid #bef574;
+  border: 4px solid #bef574;
   background-color: #9f6fcf;
   outline: none;
 }
 button:disabled {
+  border: 4px solid #9f6fcf;
   background-color: #9f6fcf;
   color: #b289db;
-  &:hover{
+  /* &:hover{
     border: none;
-  }
+  } */
 }
